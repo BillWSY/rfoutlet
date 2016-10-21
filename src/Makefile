@@ -6,6 +6,9 @@ send: RCSwitch.o send.o
 codesend: RCSwitch.o codesend.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $+ -o $@ -lwiringPi
 	
+sendserver: RCSwitch.o sendserver.o
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $+ -o $@ -lwiringPi
+	
 RFSniffer: RCSwitch.o RFSniffer.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $+ -o $@ -lwiringPi
 	
